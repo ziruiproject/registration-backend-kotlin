@@ -1,6 +1,9 @@
 package com.zirui.belajar.reponses
 
-data class WebResponse(
+data class WebResponse<T>(
+    val code: Int,
     val status: String,
-    val message: String
+    val error: String,
+    val message: String,
+    val data: T
 )
